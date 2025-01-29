@@ -5,16 +5,16 @@ const newServer = http.createServer(async (req, res) => {
   console.log(`_${req.url}`);
   if (req.url == "/")
     { 
-   const data= await fsPromises.readFile("./pages/homepage.html");
+   const data= await fsPromises.readFile("./homepage.html");
         res.end(data);}
 
 
   else if (req.url == "/About")  {
-    const data= await fsPromises.readFile("./pages/About.html");
+    const data= await fsPromises.readFile("./About.html");
   res.end(data);}
 
   else {
-    const data= await fsPromises.readFile("./pages/other.html");
+    const data= await fsPromises.readFile("./other.html");
     res.end(data);}
   }
 );
